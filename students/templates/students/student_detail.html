@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Student Detail</h2>
+  <dl class="row">
+    <dt class="col-sm-3">ID</dt>
+    <dd class="col-sm-9">{{ student.id }}</dd>
+
+    <dt class="col-sm-3">Name</dt>
+    <dd class="col-sm-9">{{ student.name }}</dd>
+
+    <dt class="col-sm-3">Age</dt>
+    <dd class="col-sm-9">{{ student.age }}</dd>
+
+    <dt class="col-sm-3">Grade</dt>
+    <dd class="col-sm-9">{{ student.grade }}</dd>
+  </dl>
+
+  <a class="btn btn-primary" href="{% url 'student_list' %}">Back to Student List</a>
+{% endblock %}

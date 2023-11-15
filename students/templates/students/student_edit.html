@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>{% if student %}Edit Student{% else %}Add Student{% endif %}</h2>
+  <form method="post" {% if student %}action="{% url 'student_edit' student.id %}"{% else %}action="{% url 'student_new' %}"{% endif %}>
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-success">{% if student %}Update{% else %}Add{% endif %}</button>
+    <a class="btn btn-secondary" href="{% url 'student_list' %}">Cancel</a>
+  </form>
+{% endblock %}
