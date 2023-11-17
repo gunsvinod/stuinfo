@@ -6,4 +6,4 @@ class Student(models.Model):
     grade = models.CharField(max_length=2)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} + {self.id}'

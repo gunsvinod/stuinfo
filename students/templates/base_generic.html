@@ -5,11 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Site{% endblock %}</title>
+    <title>{% block title %}Student Information{% endblock %}</title>
     <!-- Add the following lines for Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Add your custom CSS styles if needed -->
+    <style>
+      body {
+          background-color: #faf8f9; /* Light Grayish Blue */
+      }
+      .container {
+          background-color: #ffffff; /* White */
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-top: 20px;
+      }
+      nav {
+          background-color: #ff00a2; /* Bootstrap Primary Blue */
+      }
+      nav a {
+          color: #ffffff; /* White */
+      }
+  </style>
     {% block extra_css %}{% endblock %}
+
 </head>
 <body>
 
